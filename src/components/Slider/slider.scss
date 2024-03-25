@@ -1,0 +1,35 @@
+.section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100vw;
+    margin: 5rem auto;
+}
+
+.section-center {
+    margin: 0 auto;
+    margin-top: 3rem;
+    width: 85vw;
+    height: 500px;
+    max-width: 800px;
+    text-align: center;
+    position: relative;
+    display: flex;
+    overflow: hidden;
+}
+
+
+
+@media (max-width: 740px) {
+
+    .section-center {
+        height: 450px;
+    }
+}
+
+@media (max-width: 500px) {
+
+    .section-center {
+        height: 330px;
+    }
+}

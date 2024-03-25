@@ -1,0 +1,128 @@
+.controller {
+    padding: 16px 13px 15px 13px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out, 0.2s ease-out;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    background: none;
+    background-color: #121212;
+    border-radius: 50%;
+
+    & svg {
+        fill: #fff;
+        stroke: #fff;
+    }
+
+    &:active {
+        background-color: #08a652;
+    }
+
+    &:active svg {
+        fill: #000;
+        stroke: #000;
+    }
+
+    @media (hover: hover) {
+        &:hover {
+            transform: scale(1.050);
+        }
+    }
+}
+
+
+.prev {
+    padding: 15px 13px 15px 13px;
+
+    & svg {
+        transform: rotate(180deg);
+    }
+}
+
+.play {
+    padding: 17px 15px 17px 18px;
+
+    &:disabled {
+        background-color: #08a652;
+        cursor: auto;
+
+        &:hover {
+            transform: none;
+        }
+
+        &:active svg {
+            fill: #fff;
+            stroke: #fff;
+        }
+
+    }
+}
+
+.stop:disabled {
+    background-color: #c2c2c2;
+    cursor: auto;
+
+    &:active svg {
+        fill: #fff;
+        stroke: #fff;
+    }
+
+    &:hover {
+        transform: none;
+    }
+
+}
+
+@media (max-width: 990px) {
+    .controller {
+        width: 40px;
+        height: 40px;
+        padding: 13px;
+
+        & svg {
+            width: 15px;
+            height: 15px;
+        }
+
+        &:nth-child(2):nth-child(3) {
+            position: absolute;
+            top: 15px;
+        }
+    }
+}
+
+@media (max-width: 740px) {
+
+    .controller {
+        width: 30px;
+        height: 30px;
+        padding: 8px;
+
+        & svg {
+            width: 10px;
+            height: 10px;
+        }
+    }
+}
+
+@media (max-width: 500px) {
+  
+    .controller {
+      order: 2;
+      &:nth-child(-n+2) {
+        margin-bottom: 5px;
+      }
+    }
+  
+    .prev {
+      order: 1;
+    }
+  
+    .play {
+      order: 3;
+    }
+  
+    .stop {
+      order: 4;
+    }
+  }
